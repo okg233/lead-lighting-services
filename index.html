@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lighting Services | Your Lighting &amp; Sign Contractor &mdash; St. Catharines, ON</title>
+<meta name="description" content="Lighting Services provides every kind of lighting solution possible for multi-residential buildings, industrial and commercial properties. Established 1990. Call 905-646-5533.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --dark:#0d1117;
+  --surface:#141c24;
+  --card:#1c2534;
+  --brand:#f59e0b;
+  --brand-hover:#d97706;
+  --text:#e2e8f0;
+  --muted:#7a8fa6;
+  --border:#253347;
+  --navy:#0a1628;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--dark);color:var(--text);line-height:1.6}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--brand)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 5%}
+.nav-logo{font-size:1.2rem;font-weight:800;color:#fff;line-height:1.2}
+.nav-logo span{color:var(--brand);display:block;font-size:0.66rem;font-weight:500;letter-spacing:1px;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--brand)}
+.nav-cta{background:var(--brand);color:#0d1117;padding:9px 22px;border-radius:5px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--brand-hover)}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 5% 80px}
+.hero-bg{position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;filter:brightness(0.18) saturate(0.4)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,17,23,0.93) 0%,rgba(245,158,11,0.08) 100%)}
+.hero-content{position:relative;max-width:1200px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.35);color:var(--brand);padding:6px 16px;border-radius:4px;font-size:0.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:14px;letter-spacing:-1px}
+.hero h1 em{color:var(--brand);font-style:normal}
+.hero-tagline{font-size:1.05rem;color:#b0c0d0;font-style:italic;margin-bottom:18px}
+.hero-sub{font-size:0.95rem;color:var(--muted);max-width:600px;margin-bottom:34px;line-height:1.75}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--brand);color:#0d1117;padding:14px 30px;border-radius:5px;font-weight:800;font-size:0.95rem;text-decoration:none;transition:all .2s;border:none;cursor:pointer;display:inline-block}
+.btn-primary:hover{background:var(--brand-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,0.35)}
+.btn-secondary{background:transparent;border:1.5px solid rgba(226,232,240,0.3);color:var(--text);padding:14px 30px;border-radius:5px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-secondary:hover{border-color:var(--brand);color:var(--brand)}
+/* PROMO BANNER */
+.promo{background:var(--brand);padding:16px 5%}
+.promo-inner{max-width:1200px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:center}
+.promo-item{color:#0d1117;font-size:0.85rem;font-weight:700;text-align:center}
+.promo-item span{display:block;font-size:0.72rem;font-weight:500;opacity:0.75;margin-top:2px}
+/* STATS BAR */
+.stats-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 5%}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.stat-item{padding:14px}
+.stat-value{font-size:2rem;font-weight:900;color:var(--brand);display:block;line-height:1}
+.stat-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:5px}
+/* ABOUT */
+.about{padding:90px 5%;background:var(--dark)}
+.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-images{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-img-main{grid-column:1/-1;border-radius:10px;overflow:hidden}
+.about-img-main img{width:100%;height:260px;object-fit:cover;display:block}
+.about-img-sm{border-radius:8px;overflow:hidden}
+.about-img-sm img{width:100%;height:160px;object-fit:cover;display:block}
+.about-content .label{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.about-content h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;line-height:1.2;color:#fff;margin-bottom:18px}
+.about-content p{color:var(--muted);line-height:1.85;margin-bottom:16px;font-size:0.95rem}
+.about-cta{margin-top:24px}
+/* SERVICES */
+.services{padding:90px 5%;background:var(--surface)}
+.services-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:54px}
+.section-header .label{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.section-header h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff}
+.section-header p{color:var(--muted);max-width:650px;margin:12px auto 0;line-height:1.75;font-style:italic}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--brand);transform:scaleY(0);transition:transform .3s;transform-origin:top}
+.service-card:hover{border-color:#2e4060;transform:translateX(4px);box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.service-card:hover::before{transform:scaleY(1)}
+.service-icon{font-size:1.9rem;margin-bottom:12px;display:block}
+.service-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:9px}
+.service-card p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+/* GALLERY */
+.gallery{padding:80px 5%;background:var(--dark)}
+.gallery-inner{max-width:1200px;margin:0 auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:40px}
+.gallery-item{border-radius:8px;overflow:hidden;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gallery-item:hover img{transform:scale(1.05)}
+/* AREA */
+.area{padding:50px 5%;background:var(--surface)}
+.area-inner{max-width:1200px;margin:0 auto;text-align:center}
+.area-inner .label{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.area-inner h2{font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:22px}
+.area-chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.chip{background:var(--card);border:1px solid var(--border);color:#b0c0d0;padding:9px 20px;border-radius:20px;font-size:0.85rem;font-weight:500;transition:all .2s}
+.chip:hover{border-color:var(--brand);color:var(--brand)}
+/* WHY US */
+.why{padding:90px 5%;background:var(--dark)}
+.why-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-content .label{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.why-content h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff;margin-bottom:24px}
+.why-list{list-style:none;display:grid;gap:14px}
+.why-list li{display:flex;align-items:flex-start;gap:12px;color:var(--muted);font-size:0.93rem;line-height:1.65}
+.why-check{width:20px;height:20px;background:var(--brand);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0d1117;font-size:0.65rem;font-weight:800;margin-top:3px}
+.why-img{position:relative;border-radius:10px;overflow:hidden}
+.why-img img{width:100%;height:420px;object-fit:cover;display:block}
+.why-img-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,17,23,0.9),transparent);padding:28px 20px 18px;text-align:center}
+.why-img-cap strong{display:block;color:#fff;font-weight:800}
+.why-img-cap span{color:var(--brand);font-size:0.85rem}
+/* CONTACT */
+.contact{padding:90px 5%;background:var(--surface)}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info .label{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.contact-info h2{font-size:2rem;font-weight:800;color:#fff;margin-bottom:18px}
+.contact-info p{color:var(--muted);line-height:1.75;margin-bottom:28px}
+.contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.contact-icon{width:42px;height:42px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;color:var(--brand)}
+.contact-text strong{display:block;font-weight:700;color:#fff;margin-bottom:2px}
+.contact-text span{color:var(--muted);font-size:0.88rem}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:34px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.78rem;font-weight:700;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--surface);border:1.5px solid var(--border);color:var(--text);padding:11px 14px;border-radius:7px;font-size:0.92rem;transition:border-color .2s;outline:none;font-family:inherit}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--brand)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select option{background:var(--surface);color:var(--text)}
+/* FOOTER */
+footer{background:#060a0f;border-top:1px solid var(--border);padding:48px 5% 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;padding-bottom:36px;border-bottom:1px solid var(--border)}
+.footer-logo{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:12px}
+.footer-logo span{color:var(--brand)}
+.footer-desc{font-size:0.82rem;color:var(--muted);line-height:1.7;max-width:300px;font-style:italic}
+.footer-col h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#4a6080;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{color:#4a6080;text-decoration:none;font-size:0.82rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--brand)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:0.75rem;color:#2a3a4a}
+/* CHAT */
+.chat-widget{position:fixed;bottom:24px;right:24px;z-index:200}
+.chat-btn{width:56px;height:56px;background:var(--brand);border-radius:50%;border:none;cursor:pointer;font-size:1.4rem;box-shadow:0 6px 22px rgba(245,158,11,0.45);display:flex;align-items:center;justify-content:center;transition:transform .2s;color:#0d1117}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-box{position:absolute;bottom:68px;right:0;width:310px;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,0.7);display:none;flex-direction:column}
+.chat-box.open{display:flex}
+.chat-header{background:#0a1a2a;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--brand)}
+.chat-avatar{width:36px;height:36px;background:rgba(245,158,11,0.2);border:1px solid var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.chat-header-info strong{display:block;color:#fff;font-weight:700;font-size:0.9rem}
+.chat-header-info span{color:rgba(255,255,255,0.6);font-size:0.72rem}
+.chat-online{width:7px;height:7px;background:#22c55e;border-radius:50%;margin-left:auto;box-shadow:0 0 6px #22c55e}
+.chat-msgs{padding:16px;flex:1;display:flex;flex-direction:column;gap:10px;max-height:240px;overflow-y:auto}
+.msg{padding:9px 12px;border-radius:9px;font-size:0.85rem;line-height:1.5;max-width:86%}
+.msg.bot{background:var(--surface);color:var(--text);align-self:flex-start;border:1px solid var(--border)}
+.msg.user-msg{background:var(--brand);color:#0d1117;align-self:flex-end;font-weight:600}
+.chat-input-row{display:flex;gap:7px;padding:12px 14px;border-top:1px solid var(--border)}
+.chat-input{flex:1;background:var(--surface);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:7px;font-size:0.85rem;outline:none;font-family:inherit}
+.chat-input::placeholder{color:var(--muted)}
+.chat-send{background:var(--brand);border:none;color:#0d1117;width:36px;height:36px;border-radius:7px;cursor:pointer;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .about-inner,.why-inner,.contact-inner{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr}
+  .promo-inner{flex-direction:column;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Lighting Services<span>Your Lighting &amp; Sign Contractor &mdash; St. Catharines, ON</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+19056465533" class="nav-cta">&#128222; 905-646-5533</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#128161; Established 1990 &mdash; Chamber of Commerce Member</div>
+    <h1>Lighting <em>Services</em></h1>
+    <p class="hero-tagline">"Your Lighting &amp; Sign Contractor"</p>
+    <p class="hero-sub">For outdoor security lighting at your retail store, office, multi-residential building, condominium, apartment building and commercial or industrial location. The next generation of LED's are here!</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="tel:+19056465533" class="btn-secondary">&#128222; 905-646-5533</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNER -->
+<div class="promo">
+  <div class="promo-inner">
+    <div class="promo-item">FREE DELIVERY in the Niagara Area<span>Minimum order $100.00</span></div>
+    <div class="promo-item">10% OFF Labour &mdash; First Call for New Clients<span>Tell us you found us on the web!</span></div>
+    <div class="promo-item">Save On Energy Rebates May Apply<span>Ask us about eligible LED replacements</span></div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="stat-value">1990</span><span class="stat-label">Established</span></div>
+    <div class="stat-item"><span class="stat-value">5&#9733;</span><span class="stat-label">Client Rating</span></div>
+    <div class="stat-item"><span class="stat-value">LED</span><span class="stat-label">Retrofit Specialists</span></div>
+    <div class="stat-item"><span class="stat-value">CoC</span><span class="stat-label">Chamber of Commerce</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-images">
+      <div class="about-img-main"><img src="images/hero.jpg" alt="Lighting Services &mdash; commercial lighting installation" loading="lazy"></div>
+      <div class="about-img-sm"><img src="images/work1.jpg" alt="Lighting installation work" loading="lazy"></div>
+      <div class="about-img-sm"><img src="images/work2.jpg" alt="LED retrofit work" loading="lazy"></div>
+    </div>
+    <div class="about-content">
+      <div class="label">About Us</div>
+      <h2>Lighting Services &mdash; A Division of Systems Plus Inc.</h2>
+      <p>Lighting Services provides every kind of lighting solution possible for multi-residential buildings, industrial and commercial properties. We've been serving the Niagara Region and Greater Hamilton Area since 1990.</p>
+      <p>As we buy our lighting supplies and parts in bulk it allows us to pass on our economies of scale to you, the end user. Our repairs and maintenance services are priced to pass these savings on to our clients. We can replace existing lighting with energy efficient alternatives and can offer complete retrofits of your lighting systems &mdash; upgrading them to more efficient solutions.</p>
+      <p>Consultation in conjunction with our suppliers and manufacturers, allows you to have an informed decision on upgrading or replacement of your lighting systems. We offer various cost and energy savings solutions for you to choose from while always maintaining our pricing advantages.</p>
+      <div class="about-cta">
+        <a href="#contact" class="btn-primary">Call 905-646-5533 &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="label">What We Do</div>
+      <h2>Our Lighting Services</h2>
+      <p>"Lighting Services provides every kind of lighting solution possible for multi-residential buildings, industrial and commercial properties."</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">&#128161;</span>
+        <h3>New Lighting Fixtures</h3>
+        <p>Supply and installation of new indoor and outdoor lighting fixtures for commercial, industrial, and multi-residential properties. Post top, canopy, wall pack, high bay, flat panel, and more.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#128268;</span>
+        <h3>New Lighting Poles</h3>
+        <p>Installation of new lighting poles up to 30 feet, including accessories: crossarms, bullhorns, tenons, and adapters. Full supply and installation for parking lots and outdoor areas.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#128295;</span>
+        <h3>Repairs to Indoor/Outdoor Lighting</h3>
+        <p>Reliable repairs to all types of indoor and outdoor lighting fixtures. From a single broken fitting to a full multi-building repair program &mdash; we handle it all.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#9728;&#65039;</span>
+        <h3>Repairs to Sign Lighting</h3>
+        <p>Experienced in diagnosing and repairing all types of sign lighting, including illuminated signs, channel letters, and outdoor business signage.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#9889;</span>
+        <h3>LED Retrofits &amp; Conversions</h3>
+        <p>We convert, retrofit or replace incandescent, fluorescent, compact fluorescent, high pressure sodium, and metal halide fixtures with energy-efficient LED. Some replacements may qualify for "Save On Energy" rebates.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#128200;</span>
+        <h3>Energy Cost &amp; Savings Solutions</h3>
+        <p>Consultation in conjunction with our suppliers and manufacturers for informed decisions on upgrading your lighting. We offer various cost and energy savings solutions while always maintaining our pricing advantages.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#9981;</span>
+        <h3>Preventative Maintenance</h3>
+        <p>Many of our clients prefer preventative maintenance for their lighting systems. Regular LED re-lamping prevents large overhaul costs and allows easier annual cost budgeting of your maintenance.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#128274;</span>
+        <h3>Outdoor Fixture Cleaning &amp; Re-lamping</h3>
+        <p>Light fixture maintenance and cleaning for building wall packs, walkway bollards and poles, and parking lot poles can return lighting levels to near original.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#9851;&#65039;</span>
+        <h3>Used Lamp &amp; Ballast Recycling</h3>
+        <p>Responsible disposal and recycling of used lamps and ballasts. We handle the logistics so your property stays compliant and environmentally responsible.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#128230;</span>
+        <h3>Supply of Lighting Products</h3>
+        <p>Supply of lighting products for maintenance staff. No charge for delivery in the Niagara area (minimum order $100.00). LED, fluorescent, HPS, metal halide, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="gallery-inner">
+    <div class="section-header">
+      <div class="label">Our Work</div>
+      <h2>Work Gallery</h2>
+      <p>"Take a look at some of our work. We're happy to show off our job sites."</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/work1.jpg" alt="Lighting installation job site" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/work2.jpg" alt="Commercial lighting work" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/work3.jpg" alt="Outdoor lighting project" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/work4.jpg" alt="LED retrofit project" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<div class="area">
+  <div class="area-inner">
+    <div class="label">Service Area</div>
+    <h2>Serving Southern Ontario</h2>
+    <div class="area-chips">
+      <div class="chip">&#128205; Niagara Region</div>
+      <div class="chip">&#128205; Greater Hamilton Area</div>
+      <div class="chip">&#128205; Burlington</div>
+      <div class="chip">&#128205; Haldimand</div>
+      <div class="chip">&#128205; Norfolk</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why" class="why">
+  <div class="why-inner">
+    <div class="why-content">
+      <div class="label">Why Choose Us</div>
+      <h2>Keeping Your Business Bright.</h2>
+      <ul class="why-list">
+        <li><span class="why-check">&#10003;</span><span>Established 1990 &mdash; over 35 years of lighting expertise</span></li>
+        <li><span class="why-check">&#10003;</span><span>Chamber of Commerce member &mdash; St. Catharines</span></li>
+        <li><span class="why-check">&#10003;</span><span>Bulk purchasing = savings passed directly to you</span></li>
+        <li><span class="why-check">&#10003;</span><span>Free delivery in the Niagara Area (min. order $100)</span></li>
+        <li><span class="why-check">&#10003;</span><span>10% off labour for new clients who found us on the web</span></li>
+        <li><span class="why-check">&#10003;</span><span>LED retrofits may qualify for Save On Energy rebates</span></li>
+      </ul>
+    </div>
+    <div class="why-img">
+      <img src="images/work3.jpg" alt="Lighting Services job site quality" loading="lazy">
+      <div class="why-img-cap">
+        <strong>St. Catharines' Lighting Contractor</strong>
+        <span>Niagara Region &amp; Hamilton Area</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="label">Get In Touch</div>
+      <h2>Call or Email Us Today</h2>
+      <p>Call today for replacement of existing fixtures or new installations! Located in St. Catharines, serving the Niagara Region and beyond.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">&#128222;</div>
+        <div class="contact-text"><strong>Phone</strong><span><a href="tel:+19056465533" style="color:var(--brand);text-decoration:none">905-646-5533</a></span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">&#128231;</div>
+        <div class="contact-text"><strong>Email</strong><span>service@systemsplus.ca</span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">&#128205;</div>
+        <div class="contact-text"><strong>Location</strong><span>120 Bunting Rd, St. Catharines, ON L2P 3G5</span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">&#128336;</div>
+        <div class="contact-text"><strong>Hours</strong><span>Mon&ndash;Thu: 7:30 AM &ndash; 3:30 PM | Fri: 7:30 AM &ndash; 1:30 PM</span></div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3 style="margin-bottom:22px;font-size:1.15rem;font-weight:800;color:#fff">Request a Quote</h3>
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="905-000-0000"></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">&mdash; Select a service &mdash;</option>
+          <option>New Lighting Fixtures</option>
+          <option>New Lighting Poles</option>
+          <option>Indoor/Outdoor Lighting Repairs</option>
+          <option>Sign Lighting Repairs</option>
+          <option>LED Retrofits &amp; Conversions</option>
+          <option>Energy Cost &amp; Savings Consultation</option>
+          <option>Preventative Maintenance</option>
+          <option>Outdoor Fixture Cleaning &amp; Re-lamping</option>
+          <option>Lamp &amp; Ballast Recycling</option>
+          <option>Supply of Lighting Products</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Project Details</label><textarea placeholder="Describe your lighting project or issue..."></textarea></div>
+      <button class="btn-primary" style="width:100%;font-size:1rem">Send Request &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Lighting <span>Services</span></div>
+        <p class="footer-desc">"Lighting Services provides every kind of lighting solution possible for multi-residential buildings, industrial and commercial properties." &mdash; Established 1990.</p>
+        <p style="margin-top:10px;font-size:0.78rem;color:var(--muted)">St. Catharines, ON | 905-646-5533</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">New Lighting Fixtures</a></li>
+          <li><a href="#services">New Lighting Poles</a></li>
+          <li><a href="#services">LED Retrofits</a></li>
+          <li><a href="#services">Sign Lighting Repairs</a></li>
+          <li><a href="#services">Preventative Maintenance</a></li>
+          <li><a href="#services">Energy Savings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19056465533">905-646-5533</a></li>
+          <li><a href="mailto:service@systemsplus.ca">service@systemsplus.ca</a></li>
+          <li><a href="#contact">120 Bunting Rd</a></li>
+          <li><a href="#contact">St. Catharines, ON L2P 3G5</a></li>
+          <li><a href="#contact">Mon&ndash;Thu: 7:30AM&ndash;3:30PM</a></li>
+          <li><a href="#contact">Fri: 7:30AM&ndash;1:30PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Lighting Services, a Division of Systems Plus Inc. All rights reserved.</span>
+      <span>St. Catharines, ON &mdash; Niagara &middot; Hamilton &middot; Burlington</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget">
+  <button class="chat-btn" onclick="toggleChat()" title="Chat with Liam">&#128161;</button>
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+      <div class="chat-avatar">&#128161;</div>
+      <div class="chat-header-info">
+        <strong>Liam</strong>
+        <span>Lighting Services Virtual Assistant</span>
+      </div>
+      <div class="chat-online"></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hi! I'm Liam from Lighting Services. We've been the Niagara Region's commercial lighting contractor since 1990. Got a lighting question or need a quote? Ask away, or call 905-646-5533!</div>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-input" id="chatInput" placeholder="Ask about lighting..." onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="chat-send" onclick="sendMsg()">&#8594;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleChat(){document.getElementById('chatBox').classList.toggle('open')}
+const R={
+  'led':'We convert, retrofit or replace incandescent, fluorescent, CFL, HPS, and metal halide with LED. Some qualify for Save On Energy rebates!',
+  'retrofit':'LED retrofits are our specialty. We upgrade incandescent, fluorescent, HPS, and metal halide fixtures. Call 905-646-5533 for a quote.',
+  'repair':'We repair all types of indoor and outdoor lighting fixtures, including sign lighting. Quick, professional, and priced fairly.',
+  'sign':'We specialize in sign lighting repairs &mdash; illuminated signs, channel letters, outdoor business signage.',
+  'pole':'We install new lighting poles up to 30 feet, including all accessories: crossarms, bullhorns, tenons, and adapters.',
+  'maintenance':'Many clients prefer our preventative maintenance programs. Regular re-lamping prevents large overhaul costs and allows easier annual budgeting.',
+  'delivery':'No charge for product delivery in the Niagara area for orders over $100.00!',
+  'new client':'New clients receive 10% off labour charges for the first call &mdash; just tell us you found us on the web!',
+  'rebate':'Some LED fixture replacements may qualify for Save On Energy rebates. Ask us when you call!',
+  'area':'We serve the Niagara Region, Greater Hamilton Area, Burlington, Haldimand, and Norfolk.',
+  'hours':'Our hours are Mon&ndash;Thu 7:30 AM to 3:30 PM, and Friday 7:30 AM to 1:30 PM. Call us at 905-646-5533.',
+  'contact':'Reach us at 905-646-5533 or email service@systemsplus.ca. Located at 120 Bunting Rd, St. Catharines, ON.',
+  'default':'We\'d be happy to help with any commercial or industrial lighting need! Call 905-646-5533 or fill out the contact form &mdash; every kind of lighting solution, possible.'
+};
+function sendMsg(){
+  const inp=document.getElementById('chatInput');
+  const msg=inp.value.trim();
+  if(!msg)return;
+  inp.value='';
+  const msgs=document.getElementById('chatMsgs');
+  msgs.innerHTML+=`<div class="msg user-msg">${msg}</div>`;
+  msgs.scrollTop=msgs.scrollHeight;
+  const key=Object.keys(R).find(k=>msg.toLowerCase().includes(k))||'default';
+  setTimeout(()=>{msgs.innerHTML+=`<div class="msg bot">${R[key]}</div>`;msgs.scrollTop=msgs.scrollHeight},500);
+}
+</script>
+</body>
+</html>
